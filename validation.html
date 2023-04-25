@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">          
+<head><meta charset="utf-8">
+<title>valid</title>
+<script type="text/javascript">
+function val()
+{
+  var ptrn=/^[a-zA-Z]+$/;
+ var name=document.getElementById("nam").value;
+ if(name =="")
+   { document.getElementById("ans").innerHTML="please enter name";
+     return false;
+   }
+   if(!ptrn.test(name))
+    {
+    document.getElementById("ans").innerHTML="only character allowed";
+    }
+    
+    
+      
+    var pin=document.getElementById("xyz").value;
+    var ptrn=/^[0-9]{6}$/;   
+    if(pin==" ")
+      {
+      document.getElementById("amc").innerHTML="enter the pincode";
+      return false;
+       }
+     if(!ptrn.test(pin))
+     {
+     document.getElementById("amc").innerHTML="6 numberallowed";
+     return false;
+     }
+    
+      
+    
+    
+   }
+  
+
+</script>
+</head>
+<body>
+<form action="#">
+Name:<input type="text" id="nam" >
+<span style="color: red;" id="ans"></span><br><br>
+
+pincode:<input type="number" id="xyz" >
+<span  style="color:red;" id="amc" ></span>
+
+<br>
+<input type="submit" value="submit" onclick="return(val());">
+</form>
+</body>
+</html>
